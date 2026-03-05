@@ -109,5 +109,5 @@ Aşağıda uygulamaya ait gereksinim analizi yapılıp listelenmiştir.Ekip üye
 
 # Gereksinim Dağılımları
 
-1. [Beyza Nur Kaya'nın Gereksinimleri](Beyza-Nur-Kaya/Beyza-NurKaya-Gereksinimler.md)
+1. [Beyza Nur Kaya'nın Gereksinimleri](Beyza-Nur-Kaya/Beyza-Nur-Kaya-Gereksinimler.md)
 2. [Melike Ünlü'nün Gereksinimleri](Melike-Ünlü/Melike-Ünlü-Gereksinimler.md)
