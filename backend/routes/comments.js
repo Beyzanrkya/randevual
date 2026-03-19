@@ -16,7 +16,7 @@ router.post("/", authMiddleware, async (req, res) => {
     }
 
     const newComment = new Comment({
-      customerId: req.user.userId,
+      customerId: req.body.customerId || req.user.userId || req.user.businessId,
       businessId,
       text,
       rating,
