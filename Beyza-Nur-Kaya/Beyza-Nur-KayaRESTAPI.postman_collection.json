@@ -1,0 +1,164 @@
+{
+  "info": {
+    "_postman_id": "36dfc6d7-16ff-4bd1-813f-2e0bfedabdc0",
+    "name": "Beyza-Nur-KayaRESTAPI",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "50537861",
+    "_collection_link": "https://go.postman.co/collection/50537861-36dfc6d7-16ff-4bd1-813f-2e0bfedabdc0?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "1. İşletme Üye Olma",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": [
+        {
+          "name": "1. İşletme Üye Olma",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Test İşletme\",\r\n  \"email\": \"test@isletme.com\",\r\n  \"password\": \"Test1234!\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://randevual-beta.vercel.app/businesses/register",
+              "protocol": "https",
+              "host": [
+                "randevual-beta",
+                "vercel",
+                "app"
+              ],
+              "path": [
+                "businesses",
+                "register"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Cache-Control",
+              "value": "public, max-age=0, must-revalidate"
+            },
+            {
+              "key": "Content-Length",
+              "value": "184"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 19 Mar 2026 22:15:24 GMT"
+            },
+            {
+              "key": "Etag",
+              "value": "W/\"b8-JqJANs8XijY7MI6RCqWBBhBjky0\""
+            },
+            {
+              "key": "Server",
+              "value": "Vercel"
+            },
+            {
+              "key": "Strict-Transport-Security",
+              "value": "max-age=63072000; includeSubDomains; preload"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "X-Vercel-Cache",
+              "value": "MISS"
+            },
+            {
+              "key": "X-Vercel-Id",
+              "value": "fra1::iad1::wxzrr-1773958521897-ded4bc7d1edb"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"message\": \"İşletme başarıyla oluşturuldu\",\n    \"business\": {\n        \"_id\": \"69bc757c6c6a3c953033556e\",\n        \"name\": \"Test İşletme\",\n        \"email\": \"test@isletme.com\",\n        \"createdAt\": \"2026-03-19T22:15:24.213Z\"\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "İşletme Oluşturma",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "İşletme Giriş",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "Randevuları Listeleme",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "Randevuları Güncelleme",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "Comment Ekleme",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "Comment Güncelleme",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "Comment Silme",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "Kategori Listeleme",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    }
+  ]
+}
