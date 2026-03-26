@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const Appointment = require("../models/Appointment");
 const authMiddleware = require("../middleware/auth");
+const appointmentController = require("../controllers/appointmentController");
 
 // GEREKSİNİM 1: RANDEVU GÜNCELLEME
 // PUT /appointments/:appointmentId
@@ -61,5 +62,14 @@ router.get("/", authMiddleware, async (req, res) => {
     res.status(500).json({ message: "Sunucu hatası", error: error.message });
   }
 });
+
+// 4. Randevu Oluşturma
+router.post("/", authMiddleware, appointmentController.createAppointment);
+
+// 5. Randevu Listeleme (Müşteri için özel)
+router.get("/me", authMiddleware, appointmentController.getCustomerAppointments);
+
+// 6. Randevu Silme (İptal)
+router.delete("/:appointmentId", authMiddleware, appointmentController.deleteAppointment);
 
 module.exports = router;

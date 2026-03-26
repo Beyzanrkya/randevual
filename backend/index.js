@@ -9,6 +9,8 @@ const businessRoutes = require("./routes/businesses");
 const appointmentRoutes = require("./routes/appointments");
 const commentRoutes = require("./routes/comments");
 const categoryRoutes = require("./routes/categories");
+const customerRoutes = require("./routes/customers");
+const serviceRoutes = require("./routes/services");
 
 const app = express();
 
@@ -21,6 +23,8 @@ app.get("/", (req, res) => {
 
 
 
+app.use("/customers", customerRoutes);
+app.use("/services", serviceRoutes);
 app.use("/businesses", businessRoutes);
 app.use("/appointments", appointmentRoutes);
 app.use("/comments", commentRoutes);
