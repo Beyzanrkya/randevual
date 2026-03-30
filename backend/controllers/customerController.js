@@ -1,10 +1,11 @@
 const Customer = require('../models/Customer'); // Müşteri şemasını çağırıyoruz
+const jwt = require('jsonwebtoken'); // JWT paketini dahil ediyoruz
 
 // 1. GEREKSİNİM: Müşteri Üye Olma
 // API Metodu: POST /customers/register
 exports.registerCustomer = async (req, res) => {
     try {
-        const { name, email, password } = req.body; // Tasarımda beklenen alanlar
+        const { name, email, password } = req.body; 
         
         // Yeni bir müşteri nesnesi oluşturuluyor
         const newCustomer = new Customer({ name, email, password });
@@ -12,10 +13,8 @@ exports.registerCustomer = async (req, res) => {
         // Veritabanına kaydediliyor
         await newCustomer.save();
         
-        // Başarılı yanıt (201 Created)
         res.status(201).json(newCustomer);
     } catch (error) {
-        // Hata durumunda (400 Bad Request)
         res.status(400).json({ message: "Kayıt başarısız", error: error.message });
     }
 };
@@ -24,21 +23,29 @@ exports.registerCustomer = async (req, res) => {
 // API Metodu: POST /customers/login
 exports.loginCustomer = async (req, res) => {
     try {
-        const { email, password } = req.body; // Giriş bilgileri
+        const { email, password } = req.body; 
         
         // Veritabanında bu email var mı kontrol edilir
         const customer = await Customer.findOne({ email });
         
+        // Şifre kontrolü (Eğer bcrypt kullanmıyorsan şimdilik düz metin kontrolü)
         if (!customer || customer.password !== password) {
-            // Şimdilik şifre kontrolü basit yapıldı, ilerde bcrypt eklenebilir
             return res.status(401).json({ message: "Email veya şifre hatalı" });
         }
 
-        // Başarılı girişte JWT Token dönecek (Tasarım gereği)
+        // --- GERÇEK JWT TOKEN ÜRETİMİ ---
+        
+        const token = jwt.sign(
+    { userId: customer._id, email: customer.email }, // Token içine kullanıcının ID'sini gömüyoruz
+    process.env.JWT_SECRET, // Beyza'nın auth.js'de kullandığı gizli anahtar
+    { expiresIn: '24h' } // Token 24 saat geçerli olsun
+    );
+
         res.status(200).json({ 
-            message: "Giriş başarılı", 
-            token: "Örnek_JWT_Token" // Buraya ilerde gerçek token gelecek
+        message: "Giriş başarılı", 
+        token: token 
         });
+
     } catch (error) {
         res.status(500).json({ message: "Sunucu hatası" });
     }
@@ -48,11 +55,10 @@ exports.loginCustomer = async (req, res) => {
 // API Metodu: PUT /customers/{customerId}
 exports.updateProfile = async (req, res) => {
     try {
-        // URL'den gelen ID ile müşteriyi bulup günceller
         const updatedCustomer = await Customer.findByIdAndUpdate(
             req.params.customerId, 
             req.body, 
-            { new: true } // Güncellenmiş veriyi geri döndürmek için
+            { new: true } 
         );
         
         if (!updatedCustomer) return res.status(404).json({ message: "Kullanıcı bulunamadı" });
