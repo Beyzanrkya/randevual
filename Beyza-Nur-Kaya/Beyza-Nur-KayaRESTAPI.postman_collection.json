@@ -30,7 +30,7 @@
               }
             },
             "url": {
-              "raw": "https://randevual-sfk3.vercel.app/businesses/register",
+              "raw": "https://https://randevual-theta.vercel.app//businesses/register",
               "protocol": "https",
               "host": [
                 "randevual-beta",
@@ -104,7 +104,7 @@
           }
         },
         "url": {
-          "raw": "https://randevual-sfk3.vercel.app/businesses/register",
+          "raw": "https://https://randevual-theta.vercel.app//businesses/register",
           "protocol": "https",
           "host": [
             "randevual-sfk3",
@@ -144,7 +144,7 @@
           }
         },
         "url": {
-          "raw": "https://randevual-sfk3.vercel.app/businesses/register",
+          "raw": "https://https://randevual-theta.vercel.app//businesses/register",
           "protocol": "https",
           "host": [
             "randevual-sfk3",
@@ -174,7 +174,7 @@
           }
         },
         "url": {
-          "raw": "https://randevual-sfk3.vercel.app/businesses/login",
+          "raw": "https://https://randevual-theta.vercel.app//businesses/login",
           "protocol": "https",
           "host": [
             "randevual-sfk3",
@@ -205,7 +205,7 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "https://randevual-sfk3.vercel.app/appointments?businessId=69d29fa9fa7dafca23d868c8",
+          "raw": "https://https://randevual-theta.vercel.app//appointments?businessId=69d29fa9fa7dafca23d868c8",
           "protocol": "https",
           "host": [
             "randevual-sfk3",
@@ -250,7 +250,7 @@
           }
         },
         "url": {
-          "raw": "https://randevual-sfk3.vercel.app/appointments/69d29ab241ccc83cd0d85a86",
+          "raw": "https://https://randevual-theta.vercel.app//appointments/69d29ab241ccc83cd0d85a86",
           "protocol": "https",
           "host": [
             "randevual-sfk3",
@@ -290,7 +290,7 @@
           }
         },
         "url": {
-          "raw": "https://randevual-sfk3.vercel.app/comments",
+          "raw": "https://https://randevual-theta.vercel.app//comments",
           "protocol": "https",
           "host": [
             "randevual-sfk3",
@@ -329,7 +329,7 @@
           }
         },
         "url": {
-          "raw": "https://randevual-sfk3.vercel.app/comments/69d2a004fa7dafca23d868cd",
+          "raw": "https://https://randevual-theta.vercel.app//comments/69d2a004fa7dafca23d868cd",
           "protocol": "https",
           "host": [
             "randevual-sfk3",
@@ -360,7 +360,7 @@
         "method": "DELETE",
         "header": [],
         "url": {
-          "raw": "https://randevual-sfk3.vercel.app/comments/69d2a004fa7dafca23d868cd",
+          "raw": "https://https://randevual-theta.vercel.app//comments/69d2a004fa7dafca23d868cd",
           "protocol": "https",
           "host": [
             "randevual-sfk3",
@@ -381,7 +381,7 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "https://randevual-sfk3.vercel.app/categories/69d29a4441ccc83cd0d85a83",
+          "raw": "https://https://randevual-theta.vercel.app//categories/69d29a4441ccc83cd0d85a83",
           "protocol": "https",
           "host": [
             "randevual-sfk3",

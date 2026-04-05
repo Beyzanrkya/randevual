@@ -1,12 +1,11 @@
 # Beyza Nur Kaya - REST API Görevleri
 
-**API Test Videosu:**  [Postman Test Videosu](https://www.youtube.com/watch?v=ygb-mFXHdUE)
+**API Test Videosu:** [Postman Test Videosu](https://www.youtube.com/watch?v=ygb-mFXHdUE)
 
-<<<<<<< HEAD
-=======
+# <<<<<<< HEAD
 
->>>>>>> 1d1af6834abc09d6efaa1e7af4486cb1a427c79b
-**API Adresi:** https://randevual-sfk3.vercel.app
+> > > > > > > 1d1af6834abc09d6efaa1e7af4486cb1a427c79b
+> > > > > > > **API Adresi:** https://https://randevual-theta.vercel.app/
 
 ---
 

@@ -2,7 +2,7 @@
 
 **Frontend Test Videosu:** [Link buraya eklenecek](https://example.com)
 
-**Frontend Adresi:** https://randevual-sfk3.vercel.app
+**Frontend Adresi:** https://https://randevual-theta.vercel.app/
 
 ---
 

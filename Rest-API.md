@@ -1,6 +1,6 @@
 # REST API Görev Dağılımı
 
-**REST API Adresi:** https://randevual-sfk3.vercel.app
+**REST API Adresi:** https://https://randevual-theta.vercel.app/
 
 Bu dokümanda, proje ekibindeki her üyenin geliştirmekten sorumlu olduğu REST API metotları listelenmektedir.
 
