@@ -22,7 +22,7 @@ export default function CustomerRegister() {
   const [isError, setIsError] = useState(false);
   const navigate = useNavigate();
 
-  const API_URL = import.meta.env.VITE_API_URL || "https://randevual-psol.vercel.app";
+  const API_URL = import.meta.env.VITE_API_URL || "https://randevual-theta.vercel.app";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
