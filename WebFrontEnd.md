@@ -1,6 +1,6 @@
 # Web Frontend Görev Dağılımı
 
-**Web Frontend Adresi:** https://randevual-sfk3.vercel.app
+**Web Frontend Adresi:** https://https://randevual-theta.vercel.app/
 
 Bu dokümanda, web uygulamasının kullanıcı arayüzü (UI) ve kullanıcı deneyimi (UX) görevleri listelenmektedir.
 
