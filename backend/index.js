@@ -3,6 +3,8 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 require("dotenv").config();
 
+//console.log("ENV:", process.env.MONGODB_URI);
+
 
 
 const businessRoutes = require("./routes/businesses");
