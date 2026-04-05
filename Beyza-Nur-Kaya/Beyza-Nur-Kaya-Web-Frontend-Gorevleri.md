@@ -1,8 +1,8 @@
 # Beyza Nur Kaya - Web Frontend Görevleri
 
-**Frontend Test Videosu:** [Link buraya eklenecek](https://example.com)
+**Frontend Test Videosu:** [Link buraya eklenecek](https://youtu.be/ll4oh8ftqBc)
 
-**Frontend Adresi:** https://randevual-sfk3.vercel.app
+**Frontend Adresi:** https://randevual-theta.vercel.app
 
 ---
 

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 
-const API_URL = "https://randevual-beta.vercel.app";
+const API_URL = "randevual-theta.vercel.app";
 
 const inputStyle = {
   display: "block", width: "100%", marginBottom: "12px",
