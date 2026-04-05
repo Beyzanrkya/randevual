@@ -5,7 +5,12 @@ const jwt = require('jsonwebtoken'); // JWT paketini dahil ediyoruz
 // API Metodu: POST /customers/register
 exports.registerCustomer = async (req, res) => {
     try {
-        const { name, email, password } = req.body; 
+        const { name, email, password } = req.body;
+        
+        const existingCustomer = await Customer.findOne({ email });
+        if (existingCustomer) {
+            return res.status(409).json({ message: "Bu email zaten kullanılıyor" });
+        }
         
         // Yeni bir müşteri nesnesi oluşturuluyor
         const newCustomer = new Customer({ name, email, password });
