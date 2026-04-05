@@ -2,7 +2,7 @@
 
 **API Test Videosu:** [Link buraya eklenecek](https://example.com)
 
-**API Adresi:** https://randevual-beta.vercel.app
+**API Adresi:** https://randevual-sfk3.vercel.app
 
 ---
 
