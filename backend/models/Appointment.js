@@ -4,7 +4,7 @@ const appointmentSchema = new mongoose.Schema(
   {
     customerId: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "User",
+      ref: "Customer", // Senin oluşturduğun model ismiyle aynı olmalı
       required: [true, "Müşteri ID zorunludur"],
     },
     businessId: {
@@ -15,13 +15,14 @@ const appointmentSchema = new mongoose.Schema(
     serviceId: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Service",
+      required: [true, "Hizmet ID zorunludur"],
     },
     date: {
-      type: String,
+      type: String, // YYYY-MM-DD
       required: [true, "Tarih zorunludur"],
     },
     time: {
-      type: String,
+      type: String, // HH:MM
       required: [true, "Saat zorunludur"],
     },
     status: {
@@ -29,10 +30,7 @@ const appointmentSchema = new mongoose.Schema(
       enum: ["pending", "confirmed", "cancelled"],
       default: "pending",
     },
-    note: {
-      type: String,
-      default: "",
-    },
+    note: { type: String, default: "" },
   },
   { timestamps: true }
 );
