@@ -1,6 +1,7 @@
 # Melike Ünlü'nün REST API Metotları
 
-**API Test Videosu:** [Link buraya eklenecek](https://example.com)
+**API Test Videosu:** [https://youtu.be/KTNT28wr6eE](https://example.com)
+**Frontend Adresi:** https://randevual-theta.vercel.app
 
 ---
 
