@@ -1,8 +1,9 @@
 # Beyza Nur Kaya - REST API Görevleri
 
-**API Test Videosu:** [Link buraya eklenecek](https://example.com)
+**API Test Videosu:**  [Postman Test Videosu](https://www.youtube.com/watch?v=ygb-mFXHdUE)
 
-**API Adresi:** https://randevual-beta.vercel.app
+
+**API Adresi:** https://randevual-sfk3.vercel.app
 
 ---
 
