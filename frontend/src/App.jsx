@@ -4,6 +4,13 @@ import BusinessLogin from "./pages/BusinessLogin";
 import BusinessAppointments from "./pages/BusinessAppointments";
 import Comments from "./pages/Comments";
 import Categories from "./pages/Categories";
+import CustomerLogin from "./pages/CustomerLogin";
+import CustomerRegister from "./pages/CustomerRegister";
+import CustomerAppointments from "./pages/CustomerAppointments";
+import CustomerCreateAppointment from "./pages/CustomerCreateAppointment";
+import CustomerProfile from "./pages/CustomerProfile";
+import BusinessServices from "./pages/BusinessServices";
+const API_URL = import.meta.env.VITE_API_URL || "https://randevual-psol.vercel.app";
 
 function Navbar() {
   const location = useLocation();
@@ -105,6 +112,13 @@ export default function App() {
           <Route path="/appointments" element={<BusinessAppointments />} />
           <Route path="/comments" element={<Comments />} />
           <Route path="/categories" element={<Categories />} />
+          <Route path="/customer-login" element={<CustomerLogin />} />
+          <Route path="/customer-register" element={<CustomerRegister />} />
+          <Route path="/customer-register" element={<CustomerRegister />} />
+          <Route path="/customer-appointments" element={<CustomerAppointments />} />
+          <Route path="/customer-new-appointment" element={<CustomerCreateAppointment />} />
+          <Route path="/customer-profile" element={<CustomerProfile />} />
+          <Route path="/business-services" element={<BusinessServices />} />
         </Routes>
       </div>
     </BrowserRouter>
