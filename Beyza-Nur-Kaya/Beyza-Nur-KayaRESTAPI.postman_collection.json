@@ -10,6 +10,7 @@
     {
       "name": "1. İşletme Üye Olma",
       "request": {
+<<<<<<< HEAD
         "method": "GET",
         "header": []
       },
@@ -89,66 +90,288 @@
             {
               "key": "X-Vercel-Id",
               "value": "fra1::iad1::wxzrr-1773958521897-ded4bc7d1edb"
+=======
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Video Testt İşletme\",\r\n  \"email\": \"vidfedhoo@twejfsfft.com\",\r\n  \"password\": \"Terst123564!\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+>>>>>>> 1d1af6834abc09d6efaa1e7af4486cb1a427c79b
             }
+          }
+        },
+        "url": {
+          "raw": "https://randevual-sfk3.vercel.app/businesses/register",
+          "protocol": "https",
+          "host": [
+            "randevual-sfk3",
+            "vercel",
+            "app"
           ],
-          "cookie": [],
-          "body": "{\n    \"message\": \"İşletme başarıyla oluşturuldu\",\n    \"business\": {\n        \"_id\": \"69bc757c6c6a3c953033556e\",\n        \"name\": \"Test İşletme\",\n        \"email\": \"test@isletme.com\",\n        \"createdAt\": \"2026-03-19T22:15:24.213Z\"\n    }\n}"
+          "path": [
+            "businesses",
+            "register"
+          ]
         }
-      ]
+      },
+      "response": []
     },
     {
       "name": "İşletme Oluşturma",
       "request": {
-        "method": "GET",
-        "header": []
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJidXNpbmVzc0lkIjoiNjliYzc1N2M2YzZhM2M5NTMwMzM1NTZlIiwiZW1haWwiOiJ0ZXN0QGlzbGV0bWUuY29tIiwiaWF0IjoxNzczOTU5NTk1LCJleHAiOjE3NzQ1NjQzOTV9.b-AvMspM9xNRAp8a99HApzeBONh32L9B-dixskaJOs0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Test İşletme 3\",\r\n  \"email\": \"tesJjetd5@islfterftme.com\",\r\n  \"password\": \"Test1234!\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://randevual-sfk3.vercel.app/businesses/register",
+          "protocol": "https",
+          "host": [
+            "randevual-sfk3",
+            "vercel",
+            "app"
+          ],
+          "path": [
+            "businesses",
+            "register"
+          ]
+        }
       },
       "response": []
     },
     {
       "name": "İşletme Giriş",
       "request": {
-        "method": "GET",
-        "header": []
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\r\n  \"email\": \"tesJjetd5@islfterftme.com\",\r\n  \"password\": \"Test1234!\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://randevual-sfk3.vercel.app/businesses/login",
+          "protocol": "https",
+          "host": [
+            "randevual-sfk3",
+            "vercel",
+            "app"
+          ],
+          "path": [
+            "businesses",
+            "login"
+          ]
+        }
       },
       "response": []
     },
     {
       "name": "Randevuları Listeleme",
       "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJidXNpbmVzc0lkIjoiNjlkMjlmYTlmYTdkYWZjYTIzZDg2OGM4IiwiZW1haWwiOiJ0ZXNqamV0ZDVAaXNsZnRlcmZ0bWUuY29tIiwiaWF0IjoxNzc1NDExMTQwLCJleHAiOjE3NzYwMTU5NDB9.rs_3gl76cAV7msojiTVrQ50nzGSU8V-0EKbKMkpaz6E",
+              "type": "string"
+            }
+          ]
+        },
         "method": "GET",
-        "header": []
+        "header": [],
+        "url": {
+          "raw": "https://randevual-sfk3.vercel.app/appointments?businessId=69d29fa9fa7dafca23d868c8",
+          "protocol": "https",
+          "host": [
+            "randevual-sfk3",
+            "vercel",
+            "app"
+          ],
+          "path": [
+            "appointments"
+          ],
+          "query": [
+            {
+              "key": "businessId",
+              "value": "69d29fa9fa7dafca23d868c8"
+            }
+          ]
+        }
       },
       "response": []
     },
     {
       "name": "Randevuları Güncelleme",
       "request": {
-        "method": "GET",
-        "header": []
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJidXNpbmVzc0lkIjoiNjlkMjlmYTlmYTdkYWZjYTIzZDg2OGM4IiwiZW1haWwiOiJ0ZXNqamV0ZDVAaXNsZnRlcmZ0bWUuY29tIiwiaWF0IjoxNzc1NDExMTQwLCJleHAiOjE3NzYwMTU5NDB9.rs_3gl76cAV7msojiTVrQ50nzGSU8V-0EKbKMkpaz6E",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"date\": \"2026-05-10\",\r\n  \"time\": \"14:00\",\r\n  \"status\": \"confirmed\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://randevual-sfk3.vercel.app/appointments/69d29ab241ccc83cd0d85a86",
+          "protocol": "https",
+          "host": [
+            "randevual-sfk3",
+            "vercel",
+            "app"
+          ],
+          "path": [
+            "appointments",
+            "69d29ab241ccc83cd0d85a86"
+          ]
+        }
       },
       "response": []
     },
     {
       "name": "Comment Ekleme",
       "request": {
-        "method": "GET",
-        "header": []
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJidXNpbmVzc0lkIjoiNjlkMjlmYTlmYTdkYWZjYTIzZDg2OGM4IiwiZW1haWwiOiJ0ZXNqamV0ZDVAaXNsZnRlcmZ0bWUuY29tIiwiaWF0IjoxNzc1NDExMTQwLCJleHAiOjE3NzYwMTU5NDB9.rs_3gl76cAV7msojiTVrQ50nzGSU8V-0EKbKMkpaz6E",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"businessId\": \"69c02ce47034e63dd831b9cf\",\r\n  \"text\": \"Yeni test yorum\",\r\n  \"rating\": 5\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://randevual-sfk3.vercel.app/comments",
+          "protocol": "https",
+          "host": [
+            "randevual-sfk3",
+            "vercel",
+            "app"
+          ],
+          "path": [
+            "comments"
+          ]
+        }
       },
       "response": []
     },
     {
       "name": "Comment Güncelleme",
       "request": {
-        "method": "GET",
-        "header": []
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJidXNpbmVzc0lkIjoiNjlkMjlmYTlmYTdkYWZjYTIzZDg2OGM4IiwiZW1haWwiOiJ0ZXNqamV0ZDVAaXNsZnRlcmZ0bWUuY29tIiwiaWF0IjoxNzc1NDExMTQwLCJleHAiOjE3NzYwMTU5NDB9.rs_3gl76cAV7msojiTVrQ50nzGSU8V-0EKbKMkpaz6E",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"text\": \"Güncellenmiş yorum\",\r\n  \"rating\": 5\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://randevual-sfk3.vercel.app/comments/69d2a004fa7dafca23d868cd",
+          "protocol": "https",
+          "host": [
+            "randevual-sfk3",
+            "vercel",
+            "app"
+          ],
+          "path": [
+            "comments",
+            "69d2a004fa7dafca23d868cd"
+          ]
+        }
       },
       "response": []
     },
     {
       "name": "Comment Silme",
       "request": {
-        "method": "GET",
-        "header": []
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJidXNpbmVzc0lkIjoiNjlkMjlmYTlmYTdkYWZjYTIzZDg2OGM4IiwiZW1haWwiOiJ0ZXNqamV0ZDVAaXNsZnRlcmZ0bWUuY29tIiwiaWF0IjoxNzc1NDExMTQwLCJleHAiOjE3NzYwMTU5NDB9.rs_3gl76cAV7msojiTVrQ50nzGSU8V-0EKbKMkpaz6E",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "https://randevual-sfk3.vercel.app/comments/69d2a004fa7dafca23d868cd",
+          "protocol": "https",
+          "host": [
+            "randevual-sfk3",
+            "vercel",
+            "app"
+          ],
+          "path": [
+            "comments",
+            "69d2a004fa7dafca23d868cd"
+          ]
+        }
       },
       "response": []
     },
@@ -156,7 +379,20 @@
       "name": "Kategori Listeleme",
       "request": {
         "method": "GET",
-        "header": []
+        "header": [],
+        "url": {
+          "raw": "https://randevual-sfk3.vercel.app/categories/69d29a4441ccc83cd0d85a83",
+          "protocol": "https",
+          "host": [
+            "randevual-sfk3",
+            "vercel",
+            "app"
+          ],
+          "path": [
+            "categories",
+            "69d29a4441ccc83cd0d85a83"
+          ]
+        }
       },
       "response": []
     }
