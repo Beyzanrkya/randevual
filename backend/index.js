@@ -12,15 +12,34 @@ const serviceRoutes = require("./routes/services");
 
 const app = express();
 
-// ✅ CORS düzeltmesi
 app.use(cors({
   origin: "*",
   methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"]
 }));
-app.options("*", cors()); // preflight için
-
+app.options("*", cors());
 app.use(express.json());
+
+// ✅ Cached connection - Vercel için şart!
+let isConnected = false;
+
+const connectDB = async () => {
+  if (isConnected) return;
+  await mongoose.connect(process.env.MONGODB_URI);
+  isConnected = true;
+  console.log("MongoDB bağlandı");
+};
+
+// ✅ Her istekten önce bağlantıyı kontrol et
+app.use(async (req, res, next) => {
+  try {
+    await connectDB();
+    next();
+  } catch (err) {
+    console.error("MongoDB bağlantı hatası:", err);
+    res.status(500).json({ message: "Veritabanı bağlantı hatası" });
+  }
+});
 
 app.get("/", (req, res) => {
   res.json({ message: "MBrandev API çalışıyor!", version: "1.0.0" });
@@ -32,15 +51,5 @@ app.use("/businesses", businessRoutes);
 app.use("/appointments", appointmentRoutes);
 app.use("/comments", commentRoutes);
 app.use("/categories", categoryRoutes);
-
-mongoose
-  .connect(process.env.MONGODB_URI)
-  .then(() => console.log("MongoDB bağlandı"))
-  .catch((err) => console.error("MongoDB bağlantı hatası:", err));
-
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Sunucu ${PORT} portunda çalışıyor`);
-});
 
 module.exports = app;
