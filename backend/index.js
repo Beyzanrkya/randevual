@@ -3,10 +3,6 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 require("dotenv").config();
 
-//console.log("ENV:", process.env.MONGODB_URI);
-
-
-
 const businessRoutes = require("./routes/businesses");
 const appointmentRoutes = require("./routes/appointments");
 const commentRoutes = require("./routes/comments");
@@ -16,14 +12,19 @@ const serviceRoutes = require("./routes/services");
 
 const app = express();
 
-app.use(cors());
+// ✅ CORS düzeltmesi
+app.use(cors({
+  origin: "*",
+  methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"]
+}));
+app.options("*", cors()); // preflight için
+
 app.use(express.json());
 
 app.get("/", (req, res) => {
   res.json({ message: "MBrandev API çalışıyor!", version: "1.0.0" });
 });
-
-
 
 app.use("/customers", customerRoutes);
 app.use("/services", serviceRoutes);
